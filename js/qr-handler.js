@@ -75,7 +75,7 @@ class QRHandler {
         try {
             if (this.isScanning) return;
 
-            // Check if QrScanner is available
+            // Check if QrScanner is available globally
             if (typeof QrScanner === "undefined") {
                 this.showMessage("Escáner QR no disponible. Verifique que las librerías estén cargadas.", "error");
                 return;
@@ -341,4 +341,3 @@ window.addEventListener("beforeunload", () => {
         window.qrHandler.cleanup();
     }
 });
-
